@@ -1,0 +1,65 @@
+.main-header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-bottom: 30px
+  padding-top: 30px
+  
+  &_mobile-menu
+    display: none
+  &_right-wrapper
+    display: flex
+    align-items: center
+    
+  &_favorite-button
+    position: relative
+    margin-right: 30px
+    cursor: pointer
+    z-index: 1
+    overflow: hidden
+    &::after
+      position: absolute
+      content:  url("/images/dist/FavoriteFill.svg")
+      bottom: -110%
+      left: 0
+      width: 100%
+      height: 100%
+      transition: all .35s
+      z-index: -1
+    &:hover::after
+      bottom: 0
+
+  &_cart-button
+    position: relative
+    margin-right: 30px
+    cursor: pointer
+    z-index: 1
+    overflow: hidden
+    &::after
+      position: absolute
+      content:  url("/images/dist/CartFill.svg")
+      bottom: -110%
+      left: 0
+      width: 100%
+      height: 100%
+      transition: all .35s
+      z-index: -1
+    &:hover::after
+      bottom: 0
+
+  &_auth_button
+    position: relative
+    cursor: pointer
+    z-index: 1
+    overflow: hidden
+    &::after
+      position: absolute
+      content:  url("/images/dist/UserFill.png")
+      bottom: -110%
+      left: 0
+      width: 100%
+      height: 100%
+      transition: all .35s
+      z-index: -1
+    &:hover::after
+      bottom: 0

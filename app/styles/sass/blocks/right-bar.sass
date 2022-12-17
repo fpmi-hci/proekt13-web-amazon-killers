@@ -1,0 +1,70 @@
+.right-bar
+  z-index: 2
+  position: absolute
+  right: -100%
+  top: 0
+  padding: 30px 30px 40px 30px
+  background-color: $gray
+  width: 400px
+  height: 70vh
+  color: $white
+  text-align: center
+  transition: all .35s
+  &_close
+    position: absolute
+    font-size: 0
+    width: 40px
+    height: 40px
+    top: 30px
+    right: 30px
+    border: none
+    background-position: center center
+    background-repeat: no-repeat
+    background-image: url(../images/dist/CloseIcon.svg)
+  &_logo
+    margin-right: 300px
+    margin-bottom: 50px
+  &_header
+    font-size: 32px
+    font-weight: 500
+    margin-bottom: 30px
+  &_account_menu
+    list-style-type: none
+    padding-left: 0
+    margin-bottom: 0
+    &_item
+      position: relative
+      margin-bottom: 20px
+      &::after
+        position: absolute
+        content: ''
+        bottom: -5px
+        left: 50px
+        width: 70%
+        height: 1px
+        background-color: $white
+      &:hover::after
+        background-color: $accent
+      &:last-child
+        margin-bottom: 40px
+        &::after
+         display: none
+      &:hover .right-bar_account_menu_link
+        color: $accent
+    &_link
+      font-size: 16px
+      color: $white
+      text-decoration: none
+      &:hover
+        color: $accent
+  &_exit-button
+    background: $accent
+    padding: 7px 40px
+    font-size: 16px
+    font-weight: 700
+    color: white
+    text-decoration: none
+    border: $accent
+
+.open-right-bar
+  right: 0
